@@ -1,5 +1,9 @@
+<script setup>
+import turbinBg from '@/assets/turbinbadag.jpg'
+</script>
+
 <template>
-  <section id="units">
+  <section id="units" :style="{ backgroundImage: `url(${turbinBg})` }">
     <div class="wrap">
       <div class="sec-head">
         <h2>Four unit business, <br>One precision standard</h2>
@@ -16,7 +20,6 @@ And we pioneer solutions that drive progress across industries.</p>
 <style scoped>
 #units {
   position: relative;
-  background-image: url('src/assets/turbinbadag.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
