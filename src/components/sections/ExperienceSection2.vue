@@ -3,10 +3,10 @@ import { ref } from 'vue'
 
 const timeline = [
   {
-    slug: 'turbo-daya-mekanika',
-    year: '2019',
-    title: 'PT Turbo Daya Mekanika',
-    desc: 'Analisis kasus kebocoran aliran pada steam turbine 22 MW.',
+    slug: 'PT Indonesia Ethanol Industry',
+    year: '2025',
+    title: 'PT Indonesia Ethanol Industry',
+    desc: 'Centrifugal Fan PAF Repair. ',
     images: [
       '/images/experience/turbo-daya-mekanika.jpg',
       '/images/experience/turbo-daya-mekanika-2.jpg',
@@ -14,10 +14,87 @@ const timeline = [
     ],
   },
   {
-    slug: 'jasa-pemeliharaan-pabrik',
+    slug: 'PT Kebun Tebu Mas',
+    year: '2024 & 2025',
+    title: 'PT Kebun Tebu Mas',
+    desc: 'Replacement and maintenance of evaporator tubes, along with maintenance of a 100 TPH capacity boiler (2024). <br><br> 120 TPH Capacity Boiler Maintenance (2025).',
+    images: [
+      '/images/experience/turbo-daya-mekanika.jpg',
+      '/images/experience/turbo-daya-mekanika-2.jpg',
+      '/images/experience/turbo-daya-mekanika-3.jpg',
+    ],
+  },
+  {
+    slug: 'PT Sugar Labinta',
+    year: '2023-2024',
+    title: 'PT Sugar Labinta',
+    desc: 'Manufacturing components including grinding gib for 100T boiler impactor, boiler air heater ferrule, and pneumatic fly & bottom ash silo nozzle.',
+    images: [
+      '/images/experience/turbo-daya-mekanika.jpg',
+      '/images/experience/turbo-daya-mekanika-2.jpg',
+      '/images/experience/turbo-daya-mekanika-3.jpg',
+    ],
+  },
+  {
+    slug: 'pt-gmf-aero-asia',
+    year: '2023',
+    title: 'PT GMF Aero Asia',
+    desc: 'Rotor-Dynamic Analysis on OPRA GT OP16-3A.',
+    images: [
+      '/images/experience/turbo-daya-mekanika.jpg',
+      '/images/experience/turbo-daya-mekanika-2.jpg',
+      '/images/experience/turbo-daya-mekanika-3.jpg',
+    ],
+  },
+  {
+    slug: 'pt-mesitech',
+    year: '2021',
+    title: 'PT Mesitech Purnabangun',
+    desc: 'Gearbox Inspection Service – Amarillo Gearbox.',
+    images: [
+      '/images/experience/turbo-daya-mekanika.jpg',
+      '/images/experience/turbo-daya-mekanika-2.jpg',
+      '/images/experience/turbo-daya-mekanika-3.jpg',
+    ],
+  },
+  {
+    slug: 'its',
+    year: '2021',
+    title: 'Institut Teknologi Sepuluh November',
+    desc: 'Design and Analysis Tricycle. <br> Design and Analysis E-Scooter.',
+    images: [
+      '/images/experience/turbo-daya-mekanika.jpg',
+      '/images/experience/turbo-daya-mekanika-2.jpg',
+      '/images/experience/turbo-daya-mekanika-3.jpg',
+    ],
+  },
+  {
+    slug: 'sgc',
     year: '2020',
-    title: 'PT Jasa Pemeliharaan Pabrik & Pembangkit',
-    desc: 'On-site balancing untuk unit pembangkit.',
+    title: 'PT Semen Jawa SCG',
+    desc: 'Inspection and Service MSV Voyage.<br> Tube Repair AQC Superheat Boiler.',
+    images: [
+      '/images/experience/turbo-daya-mekanika.jpg',
+      '/images/experience/turbo-daya-mekanika-2.jpg',
+      '/images/experience/turbo-daya-mekanika-3.jpg',
+    ],
+  },
+  {
+    slug: 'jppp',
+    year: '2020',
+    title: 'PT Jasa Pemeliharaan Pabrik dan Pembangkit',
+    desc: 'On Site Balancing.',
+    images: [
+      '/images/experience/turbo-daya-mekanika.jpg',
+      '/images/experience/turbo-daya-mekanika-2.jpg',
+      '/images/experience/turbo-daya-mekanika-3.jpg',
+    ],
+  },
+  {
+    slug: 'tdm',
+    year: '2019',
+    title: 'PT Turbo Daya Mekanika',
+    desc: 'Analysis of the leakage case flow in a 22 MW steam turbine.',
     images: [
       '/images/experience/jasa-pemeliharaan-pabrik.jpg',
       '/images/experience/jasa-pemeliharaan-pabrik-2.jpg',
@@ -127,7 +204,7 @@ function onTouchEnd(cardIndex) {
             </div>
 
             <h3 class="case-title">{{ t.title }}</h3>
-            <p class="case-desc">{{ t.desc }}</p>
+            <p class="case-desc" v-html="t.desc"></p>
           </div>
         </div>
 

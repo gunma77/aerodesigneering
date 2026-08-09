@@ -29,30 +29,30 @@ function placeholder(label, seed) {
 
 const units = [
   {
-    idx: 'UNIT / 01',
+    idx: '01',
     title: 'Design Units',
-    desc: 'Fokus pada engineering product design — pengukuran & rekonstruksi (reverse engineering), desain sesuai kebutuhan klien, hingga gambar teknik dan model CAD untuk analisis dan produksi.',
+    desc: 'Focusing on engineering product design — from measurement and reconstruction (reverse engineering) and custom designs tailored to client needs, to technical drawings and CAD modeling for analysis and production.',
     images: [placeholder('Design 01', 1), placeholder('Design 02', 2), placeholder('Design 03', 3)],
     // images: [img01a, img01b, img01c], // ← ganti ke ini nanti
   },
   {
-    idx: 'UNIT / 02',
+    idx: '02',
     title: 'Production Units',
-    desc: 'Mencakup konseptualisasi, pengembangan, dan perencanaan detail produk untuk kebutuhan produksi — didukung analisis teknis untuk mengevaluasi performa dan kelayakan di setiap tahap.',
+    desc: 'Encompassing product conceptualization, development, and detailed planning for manufacturing — supported by technical analysis to evaluate performance and feasibility at every stage.',
     images: [placeholder('Production 01', 4), placeholder('Production 02', 5)],
     // images: [img02a, img02b],
   },
   {
-    idx: 'UNIT / 03',
+    idx: '03',
     title: 'Installation & Maintenance',
-    desc: 'Menangani instalasi dan pemeliharaan sistem presisi tinggi, memastikan integrasi optimal setiap komponen untuk efisiensi dan performa jangka panjang.',
+    desc: 'Handling the installation and maintenance of high-precision systems, ensuring optimal integration of every component for long-term efficiency and performance.',
     images: [placeholder('Installation 01', 6), placeholder('Installation 02', 7), placeholder('Installation 03', 8)],
     // images: [img03a, img03b, img03c],
   },
   {
-    idx: 'UNIT / 04',
+    idx: '04',
     title: 'Technical Component Manufacturing',
-    desc: 'Fabrikasi komponen teknis presisi tinggi, dari purwarupa hingga produksi skala kecil, dengan kontrol kualitas ketat di setiap tahap proses.',
+    desc: 'Fabrication of high-precision technical components, from prototyping to small-scale production, with strict quality control at every stage of the process.',
     images: [placeholder('Manufacturing 01', 9), placeholder('Manufacturing 02', 10)],
     // images: [img04a, img04b],
   },
@@ -108,10 +108,6 @@ function setSlide(unitIndex, slideIndex) {
             <span class="idx">{{ u.idx }}</span>
             <h3>{{ u.title }}</h3>
             <p>{{ u.desc }}</p>
-            <a href="#contact">
-              Selengkapnya
-              <span class="arrow" aria-hidden="true">&rarr;</span>
-            </a>
           </div>
         </div>
       </div>
