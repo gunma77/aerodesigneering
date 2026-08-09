@@ -1,5 +1,4 @@
 <script setup>
-import footageImg from '@/assets/footage.jpeg'
 import truck from '@/assets/truckk.png'
 
 defineProps({
@@ -8,24 +7,6 @@ defineProps({
     default: '',
   },
 })
-
-const milestones = [
-  {
-    idx: '01 / AWAL MULA',
-    title: 'Lahir dari Passion UAV',
-    desc: 'Aero Desain Rekayasa (ADR) lahir dari ide beberapa penggemar UAV berlatar belakang Aerospace Engineering yang ingin berkontribusi di industri UAV — diawali dengan jasa sewa operasi drone dan beberapa produk UAV rancangan sendiri.',
-  },
-  {
-    idx: '02 / MASA PANDEMI',
-    title: 'Beradaptasi Saat Pandemi',
-    desc: 'Tak lama setelah ADR resmi berdiri sebagai PT di 2019, pandemi Covid-19 membuat permintaan jasa operasi UAV menurun drastis. Namun permintaan baru muncul di bidang desain dan analisis engineering.',
-  },
-  {
-    idx: '03 / EKSPANSI BISNIS',
-    title: 'Tumbuh Lintas Industri',
-    desc: 'Menyadari latar belakang aerospace engineering kami bisa bermanfaat luas, unit bisnis ADR berkembang mencakup desain & produksi, instalasi & maintenance untuk sektor transportasi, pembangkit listrik, process plant, dan oil & gas.',
-  },
-]
 </script>
 
 <template>
@@ -108,67 +89,6 @@ h1, h2, h3 {
   margin-bottom: 34px;
 }
 
-/* ---------- VISION ---------- */
-.vision-card {
-  border: 1px solid var(--line);
-  background-image : url('src/assets/turbinee.jpeg');
-  background-size: cover; 
-  background-position: center; 
-  background-repeat: no-repeat;
-
-  color: #fff;
-  padding: 56px 60px;
-  position: relative;
-}
-.vision-card .idx {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
-  letter-spacing: .12em;
-  color: #8CA0FF;
-  display: block;
-  margin-bottom: 20px;
-}
-.vision-card h2 {
-  font-size: 28px;
-  line-height: 1.35;
-  max-width: 780px;
-}
-
-/* ---------- SEC HEAD ---------- */
-.sec-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 56px;
-  gap: 40px;
-}
-.sec-head h2 { font-size: 36px; max-width: 520px; }
-.sec-head p { color: var(--grey); max-width: 340px; font-size: 15px; padding-bottom: 4px; }
-
-/* ---------- MILESTONES ---------- */
-.milestones {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-}
-.milestone {
-  background: var(--paper);
-  padding: 38px 34px;
-  position: relative;
-  transition: background .25s;
-}
-.milestone:hover { background: var(--paper-2); }
-.milestone .idx {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
-  color: var(--signal);
-  margin-bottom: 22px;
-  display: block;
-}
-.milestone h3 { font-size: 21px; margin-bottom: 14px; }
-.milestone p { color: var(--grey); font-size: 14.5px; }
 
 @media (max-width: 900px) {
   #about-hero { padding-top: 110px; }
@@ -177,10 +97,6 @@ h1, h2, h3 {
     gap: 40px;
   }
   .about-h1 { font-size: 34px; }
-  .vision-card { padding: 40px 28px; }
-  .vision-card h2 { font-size: 22px; }
-  .sec-head { flex-direction: column; align-items: flex-start; gap: 16px; }
-  .milestones { grid-template-columns: 1fr; }
   section { padding: 70px 0; }
 }
 </style>
