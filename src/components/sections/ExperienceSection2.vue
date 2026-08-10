@@ -1,82 +1,185 @@
 <script setup>
 import { ref } from 'vue'
 
+// ================================================================
+// STATIC IMPORT — foto yang sudah tersedia di src/assets/experience/
+// Tinggal uncomment baris di bawah begitu file fotonya sudah ada,
+// lalu ganti pemakaian placeholder(...) jadi nama variabel ini
+// di dalam array `timeline` (lihat komentar per-item di bawah).
+// ================================================================
+
+// --- PT Indonesia Ethanol Industry ---
+//import indonesiaEthanol1 from '@/assets/experience/turbinbadag.jpg'
+// import indonesiaEthanol2 from '@/assets/experience/indonesia-ethanol-2.jpg'
+// import indonesiaEthanol3 from '@/assets/experience/indonesia-ethanol-3.jpg'
+
+// --- PT Kebun Tebu Mas ---
+import kebunTebuMas1 from '@/assets/experience/kebunTebuMas.jpg'
+// import kebunTebuMas2 from '@/assets/experience/kebun-tebu-mas-2.jpg'
+// import kebunTebuMas3 from '@/assets/experience/kebun-tebu-mas-3.jpg'
+
+// --- PT Sugar Labinta ---
+// import sugarLabinta1 from '@/assets/experience/sugar-labinta-1.jpg'
+// import sugarLabinta2 from '@/assets/experience/sugar-labinta-2.jpg'
+// import sugarLabinta3 from '@/assets/experience/sugar-labinta-3.jpg'
+
+// --- PT GMF Aero Asia ---
+import gmf1 from '@/assets/experience/gmf1.png'
+import gmf2 from '@/assets/experience/gmf2.png'
+import gmf3 from '@/assets/experience/gmf3.png'
+import gmf4 from '@/assets/experience/gmf4.png'
+
+// --- PT Mesitech Purnabangun ---
+import mesitech2 from '@/assets/experience/mesitech2.png'
+import mesitech3 from '@/assets/experience/mesitech3.png'
+import mesitech4 from '@/assets/experience/mesitech4.png'
+import mesitech5 from '@/assets/experience/mesitech5.png'
+import mesitech6 from '@/assets/experience/mesitech6.png'
+import mesitech7 from '@/assets/experience/mesitech7.png'
+
+// --- Institut Teknologi Sepuluh November ---
+// import its1 from '@/assets/experience/its-1.jpg'
+// import its2 from '@/assets/experience/its-2.jpg'
+// import its3 from '@/assets/experience/its-3.jpg'
+
+// --- PT Semen Jawa SCG ---
+// import sgc1 from '@/assets/experience/sgc-1.jpg'
+// import sgc2 from '@/assets/experience/sgc-2.jpg'
+// import sgc3 from '@/assets/experience/sgc-3.jpg'
+
+// --- PT Jasa Pemeliharaan Pabrik dan Pembangkit ---
+import jppp1 from '@/assets/experience/jpp1.jpeg'
+import jppp2 from '@/assets/experience/jpp2.jpg'
+import jppp3 from '@/assets/experience/jpp3.jpg'
+import jppp4 from '@/assets/experience/jpp4.jpg'
+import jppp5 from '@/assets/experience/jpp5.jpg'
+import jppp6 from '@/assets/experience/jpp6.jpg'
+import jppp7 from '@/assets/experience/jpp7.jpg'
+
+// --- PT Turbo Daya Mekanika ---
+import tdm1 from '@/assets/experience/tdm1.png'
+import tdm2 from '@/assets/experience/tdm2.png'
+// import tdm3 from '@/assets/experience/tdm-3.jpg'
+
+// Placeholder SVG — dipakai sementara kalau foto belum ada
+function placeholder(label, seed) {
+  const svg = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+      <rect width="400" height="300" fill="hsl(${seed * 47 % 360}, 12%, 88%)"/>
+      <text x="50%" y="50%" font-family="monospace" font-size="14" fill="#666"
+            text-anchor="middle" dominant-baseline="middle">${label}</text>
+    </svg>
+  `.trim()
+  return `data:image/svg+xml;base64,${btoa(svg)}`
+}
+
+// ================================================================
+// CARA PAKAI:
+// 1. Taruh foto di: src/assets/experience/
+// 2. Uncomment baris import yang sesuai di atas
+// 3. Di array `timeline` bawah, ganti placeholder('Label', seed)
+//    dengan nama variabel yang sudah di-import (mis. kebunTebuMas1)
+// ================================================================
+
 const timeline = [
   {
-    slug: 'PT Indonesia Ethanol Industry',
+    slug: 'indonesia-ethanol',
     year: '2025',
     title: 'PT Indonesia Ethanol Industry',
-    desc: 'Centrifugal Fan PAF Repair. ',
+    desc: 'Centrifugal Fan PAF Repair.',
     images: [
-      '/images/experience/turbo-daya-mekanika.jpg',
-      '/images/experience/turbo-daya-mekanika-2.jpg',
-      '/images/experience/turbo-daya-mekanika-3.jpg',
+      placeholder('PT Indonesia Ethanol 01', 4),
+      // indonesiaEthanol1,
+      // indonesiaEthanol2,
+      // indonesiaEthanol3,
     ],
   },
   {
-    slug: 'PT Kebun Tebu Mas',
+    slug: 'kebun-tebu-mas',
     year: '2024 & 2025',
     title: 'PT Kebun Tebu Mas',
-    desc: 'Replacement and maintenance of evaporator tubes, along with maintenance of a 100 TPH capacity boiler (2024). <br><br> 120 TPH Capacity Boiler Maintenance (2025).',
+    desc: 'Replacement and maintenance of evaporator tubes, along with maintenance of a 100 TPH capacity boiler (2024).<br><br>120 TPH Capacity Boiler Maintenance (2025).',
     images: [
-      '/images/experience/turbo-daya-mekanika.jpg',
-      '/images/experience/turbo-daya-mekanika-2.jpg',
-      '/images/experience/turbo-daya-mekanika-3.jpg',
+      // placeholder('Kebun Tebu Mas 01', 4),
+      // placeholder('Kebun Tebu Mas 02', 5),
+      // placeholder('Kebun Tebu Mas 03', 6),
+      kebunTebuMas1,
+      // kebunTebuMas2,
+      // kebunTebuMas3,
     ],
   },
   {
-    slug: 'PT Sugar Labinta',
-    year: '2023-2024',
+    slug: 'sugar-labinta',
+    year: '2023–2024',
     title: 'PT Sugar Labinta',
     desc: 'Manufacturing components including grinding gib for 100T boiler impactor, boiler air heater ferrule, and pneumatic fly & bottom ash silo nozzle.',
     images: [
-      '/images/experience/turbo-daya-mekanika.jpg',
-      '/images/experience/turbo-daya-mekanika-2.jpg',
-      '/images/experience/turbo-daya-mekanika-3.jpg',
+      placeholder('Sugar Labinta 01', 7),
+      placeholder('Sugar Labinta 02', 8),
+      placeholder('Sugar Labinta 03', 9),
+      // sugarLabinta1,
+      // sugarLabinta2,
+      // sugarLabinta3,
     ],
   },
   {
-    slug: 'pt-gmf-aero-asia',
+    slug: 'gmf-aero-asia',
     year: '2023',
     title: 'PT GMF Aero Asia',
     desc: 'Rotor-Dynamic Analysis on OPRA GT OP16-3A.',
     images: [
-      '/images/experience/turbo-daya-mekanika.jpg',
-      '/images/experience/turbo-daya-mekanika-2.jpg',
-      '/images/experience/turbo-daya-mekanika-3.jpg',
+      // placeholder('GMF Aero Asia 01', 10),
+      // placeholder('GMF Aero Asia 02', 11),
+      // placeholder('GMF Aero Asia 03', 12),
+      gmf1,
+      gmf2,
+      gmf3,
+      gmf4
     ],
   },
   {
-    slug: 'pt-mesitech',
+    slug: 'mesitech',
     year: '2021',
     title: 'PT Mesitech Purnabangun',
     desc: 'Gearbox Inspection Service – Amarillo Gearbox.',
     images: [
-      '/images/experience/turbo-daya-mekanika.jpg',
-      '/images/experience/turbo-daya-mekanika-2.jpg',
-      '/images/experience/turbo-daya-mekanika-3.jpg',
+      // placeholder('Mesitech 01', 13),
+      // placeholder('Mesitech 02', 14),
+      // placeholder('Mesitech 03', 15),
+      mesitech2,
+      mesitech3,
+      mesitech4,
+      mesitech5,
+      mesitech6,
+      mesitech7,
     ],
   },
   {
     slug: 'its',
     year: '2021',
     title: 'Institut Teknologi Sepuluh November',
-    desc: 'Design and Analysis Tricycle. <br> Design and Analysis E-Scooter.',
+    desc: 'Design and Analysis Tricycle.<br>Design and Analysis E-Scooter.',
     images: [
-      '/images/experience/turbo-daya-mekanika.jpg',
-      '/images/experience/turbo-daya-mekanika-2.jpg',
-      '/images/experience/turbo-daya-mekanika-3.jpg',
+      placeholder('ITS 01', 16),
+      placeholder('ITS 02', 17),
+      placeholder('ITS 03', 18),
+      // its1,
+      // its2,
+      // its3,
     ],
   },
   {
     slug: 'sgc',
     year: '2020',
     title: 'PT Semen Jawa SCG',
-    desc: 'Inspection and Service MSV Voyage.<br> Tube Repair AQC Superheat Boiler.',
+    desc: 'Inspection and Service MSV Voyage.<br>Tube Repair AQC Superheat Boiler.',
     images: [
-      '/images/experience/turbo-daya-mekanika.jpg',
-      '/images/experience/turbo-daya-mekanika-2.jpg',
-      '/images/experience/turbo-daya-mekanika-3.jpg',
+      placeholder('SGC 01', 19),
+      placeholder('SGC 02', 20),
+      placeholder('SGC 03', 21),
+      // sgc1,
+      // sgc2,
+      // sgc3,
     ],
   },
   {
@@ -85,9 +188,13 @@ const timeline = [
     title: 'PT Jasa Pemeliharaan Pabrik dan Pembangkit',
     desc: 'On Site Balancing.',
     images: [
-      '/images/experience/turbo-daya-mekanika.jpg',
-      '/images/experience/turbo-daya-mekanika-2.jpg',
-      '/images/experience/turbo-daya-mekanika-3.jpg',
+      jppp1,
+      jppp2,
+      jppp3,
+      jppp4,
+      jppp5,
+      jppp6,
+      jppp7,
     ],
   },
   {
@@ -96,14 +203,12 @@ const timeline = [
     title: 'PT Turbo Daya Mekanika',
     desc: 'Analysis of the leakage case flow in a 22 MW steam turbine.',
     images: [
-      '/images/experience/jasa-pemeliharaan-pabrik.jpg',
-      '/images/experience/jasa-pemeliharaan-pabrik-2.jpg',
-      '/images/experience/jasa-pemeliharaan-pabrik-3.jpg',
+      tdm1,
+      tdm2,
     ],
   },
 ]
 
-// current slide index per card
 const activeSlide = ref(timeline.map(() => 0))
 
 function setSlide(cardIndex, slideIndex) {
@@ -116,7 +221,6 @@ function goToSlide(cardIndex, direction) {
   activeSlide.value[cardIndex] = (current + direction + len) % len
 }
 
-// swipe handling
 let touchStartX = 0
 let touchDeltaX = 0
 
@@ -132,18 +236,14 @@ function onTouchMove(e) {
 function onTouchEnd(cardIndex) {
   const threshold = 40
   if (Math.abs(touchDeltaX) > threshold) {
-    if (touchDeltaX < 0) {
-      goToSlide(cardIndex, 1)
-    } else {
-      goToSlide(cardIndex, -1)
-    }
+    goToSlide(cardIndex, touchDeltaX < 0 ? 1 : -1)
   }
   touchDeltaX = 0
 }
 </script>
 
 <template>
-  <!-- Section head — background navy, terpisah -->
+  <!-- Section head — background navy -->
   <section id="experience-head" class="experience-head-section">
     <div class="wrap">
       <div class="sec-head">
@@ -173,10 +273,10 @@ function onTouchEnd(cardIndex) {
               :style="{ transform: `translateX(-${activeSlide[i] * 100}%)` }"
             >
               <img
-                v-for="(img, si) in t.images"
+                v-for="(imgSrc, si) in t.images"
                 :key="si"
-                :src="img"
-                :alt="t.title"
+                :src="imgSrc"
+                :alt="`${t.title} — foto ${si + 1}`"
                 loading="lazy"
               />
             </div>
@@ -185,7 +285,7 @@ function onTouchEnd(cardIndex) {
 
             <div class="case-dots" v-if="t.images.length > 1">
               <button
-                v-for="(img, si) in t.images"
+                v-for="(_, si) in t.images"
                 :key="si"
                 type="button"
                 class="dot"
@@ -202,12 +302,10 @@ function onTouchEnd(cardIndex) {
               <span class="case-dot" aria-hidden="true"></span>
               <span class="case-tag">Case study</span>
             </div>
-
             <h3 class="case-title">{{ t.title }}</h3>
             <p class="case-desc" v-html="t.desc"></p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -244,7 +342,6 @@ function onTouchEnd(cardIndex) {
   position: relative;
   padding: 90px 0;
 }
-
 .case-list {
   display: flex;
   flex-direction: column;
@@ -331,9 +428,7 @@ function onTouchEnd(cardIndex) {
   cursor: pointer;
   transition: background 0.25s ease, transform 0.25s ease;
 }
-.dot:hover {
-  background: rgba(255, 255, 255, 0.7);
-}
+.dot:hover { background: rgba(255, 255, 255, 0.7); }
 .dot.active {
   background: #fff;
   transform: scale(1.25);
@@ -391,24 +486,13 @@ function onTouchEnd(cardIndex) {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
-  .case-card {
-    grid-template-columns: 1fr;
-  }
+  .case-card { grid-template-columns: 1fr; }
   .case-media,
-  .case-slides img {
-    min-height: 260px;
-  }
-  .case-body {
-    padding: 28px 26px;
-  }
-  .case-title {
-    font-size: 22px;
-  }
+  .case-slides img { min-height: 260px; }
+  .case-body { padding: 28px 26px; }
+  .case-title { font-size: 22px; }
 }
-
 @media (max-width: 560px) {
-  .sec-head h2 {
-    font-size: 32px;
-  }
+  .sec-head h2 { font-size: 32px; }
 }
 </style>

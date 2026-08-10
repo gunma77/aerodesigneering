@@ -15,32 +15,31 @@ function placeholder(label, seed) {
   return `data:image/svg+xml;base64,${btoa(svg)}`
 }
 
-// ===== IMPORT ASLI (aktifkan nanti kalau foto sudah tersedia) =====
-// import img01a from '@/assets/units/design-01.jpg'
-// import img01b from '@/assets/units/design-02.jpg'
-// import img01c from '@/assets/units/design-03.jpg'
-// import img02a from '@/assets/units/production-01.jpg'
-// import img02b from '@/assets/units/production-02.jpg'
-// import img03a from '@/assets/units/installation-01.jpg'
-// import img03b from '@/assets/units/installation-02.jpg'
-// import img03c from '@/assets/units/installation-03.jpg'
-// import img04a from '@/assets/units/manufacturing-01.jpg'
-// import img04b from '@/assets/units/manufacturing-02.jpg'
+// ===== IMPORT ASLI (aktifkan nanti kalau fot sudah tersedia) =====
+import img1 from '@/assets/units/rotorDynamic.png'
+import img2 from '@/assets/units/miniTank.png'
+import img3 from '@/assets/units/mrtSimulator.jpg'
+import img4 from '@/assets/units/mrtSimulator2.jpg'
+
+import img5 from '@/assets/units/mrtSimulator3.jpg'
+import img6 from '@/assets/units/mrtSimulator4.jpg'
+import img7 from '@/assets/units/mrtSimulator5.jpg'
+import img8 from '@/assets/units/WindTunnel.jpg'
 
 const units = [
   {
     idx: '01',
     title: 'Design Units',
     desc: 'Focusing on engineering product design — from measurement and reconstruction (reverse engineering) and custom designs tailored to client needs, to technical drawings and CAD modeling for analysis and production.',
-    images: [placeholder('Design 01', 1), placeholder('Design 02', 2), placeholder('Design 03', 3)],
-    // images: [img01a, img01b, img01c], // ← ganti ke ini nanti
+    //images: [placeholder('Design 01', 1), placeholder('Design 02', 2), placeholder('Design 03', 3)],
+    images: [img1, img2, img3, img4], 
   },
   {
     idx: '02',
     title: 'Production Units',
     desc: 'Encompassing product conceptualization, development, and detailed planning for manufacturing — supported by technical analysis to evaluate performance and feasibility at every stage.',
-    images: [placeholder('Production 01', 4), placeholder('Production 02', 5)],
-    // images: [img02a, img02b],
+    // images: [placeholder('Production 01', 4), placeholder('Production 02', 5)],
+    images: [img5, img6, img7, img8],
   },
   {
     idx: '03',
